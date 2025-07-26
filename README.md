@@ -246,7 +246,7 @@ https://discord.com/api/oauth2/authorize?client_id=123456789012345678&permission
 ### 3. **Installation**
 ```bash
 # Clone or download the repository
-git clone https://github.com/yourusername/FiveMUpdateBot.git
+git clone https://github.com/DrunkMunki/FiveMUpdateBot.git
 cd FiveMUpdateBot
 
 # Install Python dependencies
