@@ -1,0 +1,89 @@
+# FiveM Update Bot Configuration
+# Copy this file to config.ini and update the values
+
+[discord]
+discord_token = your_discord_bot_token_here
+command_prefix = !
+response_channel = 1234567890123456789
+allowed_roles = 1234567890123456789,9876543210987654321
+# Comma-separated list of Discord user IDs who can use bot commands
+# This allows for granular permissions beyond just roles
+# Example: allowed_discord_users = 123456789012345678,987654321098765432
+allowed_discord_users = 
+update_command = update
+download_command = download
+status_command = status
+version_command = version
+config_command = config
+help_command = help
+cleanup_command = cleanup
+backups_command = backups
+rollback_command = rollback
+stop_command = stop
+start_command = start
+
+[files]
+# Base directory for all file storage
+base_directory = ./bot_files/
+# Subdirectories (relative to base_directory)
+download_directory = downloads
+temp_directory = temp
+keep_downloaded_files = true
+auto_cleanup_days = 30
+
+[dev]
+ServerFiles = "G:/GTAV/dev/server"
+# Optional: ServerData path for additional data files (configs, databases, etc.)
+# This data will be backed up and restored during updates
+# ServerData = "G:/GTAV/dev/server-data"
+
+# Server Management Configuration - Choose ONE method per server:
+
+# Option 1: TCAdmin Integration (Command Line)
+TCADMIN_Enabled = True
+Service_Enabled = False  
+Service_Name = ""
+# Path to TCAdminServiceBrowser.exe (typically in C:\TCAdmin2\Monitor\)
+tcadmin_executable = C:\TCAdmin2\Monitor\TCAdminServiceBrowser.exe
+# Your server's service ID from TCAdmin panel
+tcadmin_service_id = your_dev_service_id
+
+# Option 2: Windows Service Management (comment out TCAdmin settings above)
+# TCADMIN_Enabled = False
+# Service_Enabled = True
+# Service_Name = "FXServer-Dev"
+
+# Option 3: File Operations Only (comment out both options above)
+# TCADMIN_Enabled = False
+# Service_Enabled = False
+
+[live]
+ServerFiles = "G:/GTAV/live/server"
+# Optional: ServerData path for additional data files (configs, databases, etc.)
+# This data will be backed up and restored during updates  
+# ServerData = "G:/GTAV/live/server-data"
+
+# Server Management Configuration - Choose ONE method per server:
+
+# Option 1: Windows Service Management
+TCADMIN_Enabled = False
+Service_Enabled = True
+Service_Name = "FXServer"
+
+# Option 2: TCAdmin Integration (comment out Service settings above)
+# TCADMIN_Enabled = True
+# Service_Enabled = False
+# Service_Name = ""
+# # Path to TCAdminServiceBrowser.exe (typically in C:\TCAdmin2\Monitor\)
+# tcadmin_executable = C:\TCAdmin2\Monitor\TCAdminServiceBrowser.exe
+# # Your server's service ID from TCAdmin panel
+# tcadmin_service_id = your_live_service_id
+
+# Option 3: File Operations Only (comment out both options above)
+# TCADMIN_Enabled = False
+# Service_Enabled = False
+
+# DEPRECATED - TCAdmin web interface configuration (now uses command line)
+# Old web-based configuration is no longer used due to authentication issues
+# TCAdmin now uses command-line interface via TCAdminServiceBrowser.exe
+# This provides more reliable server control without web authentication problems 
