@@ -5,7 +5,7 @@ A comprehensive Discord bot for automating FiveM server management, updates, and
 ## 🚀 Features
 
 ### 📥 **Artifact Management**
-- 🔄 **Automated FiveM Updates**: Download and install server artifacts from FiveM repository
+- 🔄 **Automated FiveM Updates**: Download and install server artifacts from [FiveM Repository](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/)
 - 💾 **Smart Caching**: Reuse downloaded files for faster operations
 - ⚡ **Pre-Download**: Download artifacts without updating servers
 - 🧹 **Automatic Cleanup**: Configurable cleanup of old downloaded files
