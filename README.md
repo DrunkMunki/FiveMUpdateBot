@@ -417,7 +417,7 @@ Run different servers with different management methods:
 - Try a different artifact number
 
 #### **"No server management configured"**
-- Set either `TCLADMIN_Enabled = True` or `Service_Enabled = True`
+- Set either `TCADMIN_Enabled = True` or `Service_Enabled = True`
 - Configure the required fields for your chosen method
 
 ### **Testing Configuration**
@@ -475,29 +475,3 @@ For issues and questions:
 3. **Test components individually** - Try TCAdmin/Service commands manually
 4. **Check file permissions** - Ensure bot can read/write to configured paths
 5. **Verify Discord permissions** - Ensure bot has necessary Discord permissions
-
-## 🔄 Migration from Web-based TCAdmin
-
-If upgrading from an older version that used web-based TCAdmin:
-
-1. **Remove old settings**:
-   ```ini
-   # Remove these from config.ini
-   tcadmin_base_url = ...
-   tcadmin_username = ...
-   tcadmin_password = ...
-   ```
-
-2. **Add new settings**:
-   ```ini
-   # Add these to each server section
-   tcadmin_executable = C:\TCAdmin2\Monitor\TCAdminServiceBrowser.exe
-   tcadmin_service_id = your_service_id
-   ```
-
-3. **Test the new method**:
-   ```bash
-   C:\TCAdmin2\Monitor\TCAdminServiceBrowser.exe -service=YOUR_ID -command=stop
-   ```
-
-The new command-line method is much more reliable and bypasses web authentication issues entirely! 
